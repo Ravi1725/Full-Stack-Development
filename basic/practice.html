@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./practice.css"/>
+    <link rel="stylesheet" href="./modal.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+</head>
+<body>
+    
+    <div class="main-container">
+    <div id="flex-container">
+            <!-- <h1 style="align-content:center;">this is the beginning of html</h1> -->
+            <button style="width :auto" class="box-container"> My Url </button>
+            <button style="width :auto" class="box-container"> Features </button>
+            <button style="width :auto" onclick="signUpClickHandler()" class="box-container"> Sign Up </button>
+            <button style="width :auto" class="box-container"> Sign In </button>
+    </div>
+
+    <div class="input-example">
+        <div onclick="clickMeHandler()" > Click me As Well!! </div>
+        <div >
+            <label  for="firstname">First Name:</label>
+            <input id="firstname" placeholder="First name" required class="styled-input" name="firstname" type="text" />
+        </div>
+        <label for="password">Password   :  </label>
+        <input placeholder="Password" type="password" name="password"/>
+        <br>
+        <label for="gender">Gender</label>
+        <input type="checkbox" name="gender"/>
+        <label>Male</label>
+        <input type="checkbox" name="gender"/>
+        <label>Female</label>
+        <input type="radio"/>
+        <label>Sign me Up! </label>
+        <div class="example-button">
+            <button onclick="clickMeHandler()">Click Me!</button>
+        </div>
+    </div>
+    </div>
+    <!--<div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Welcome back!
+
+
+            </div>
+        </div>
+    </div> -->
+
+    <div id="sign-up-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="heading">Get Started!</h3>
+            <span onclick="closeClickHandler()">
+              <i class="fa fa-times close" aria-hidden="true"></i>
+            </span>
+          </div>
+          <form>
+            <div class="input-container">
+              <label class="label"> Full name </label>
+              <input class="form-input" type="text" placeholder="Enter full name" type="text" />
+            </div>
+            <div class="input-container">
+              <label class="label"> Username </label>
+              <input class="form-input" type="text" placeholder="Enter username" type="text" />
+            </div>
+            <div class="input-container">
+              <label class="label"> Password </label>
+              <input class="form-input" type="password" placeholder="Enter password" type="text" />
+            </div>
+            <div class="input-container">
+              <label class="label"> Confirm Password </label>
+              <input class="form-input" type="password" placeholder="Enter confirm password" type="text" />
+            </div>
+          </form>
+          <div class="action-container">
+              <button class="primary"> Sign Up!</button>
+          </div>
+        </div>
+      </div>
+      <script>
+        const signUpClickHandler = () => {
+          const modal = document.getElementById("sign-up-modal");
+          modal.style.display = "flex";
+        };
+        const closeClickHandler = () =>{
+          const modal = document.getElementById("sign-up-modal");
+          modal.style.display = "";
+        }
+      </script>
+
+
+    
+</body>
+</html>

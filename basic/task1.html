@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./practice.css"/>
+    <link rel="stylesheet" href="./modal.css"/>
+    <link rel="stylesheet" href="./post.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+</head>
+<body>
+    <div class="button-container">
+       <button>Sign-in</button>
+    </div>
+    <div class="button-container">
+        <button onclick="signUpClickHandler()"> sign-up </button>
+    </div>
+    <div id="sign-up-modal" class="modal">
+        <div class="modal-contents">
+            <div class="modal-header">
+                <h3 class="heading">Welcome Back!</h3>
+                <span onclick="closeClickHandler()">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </span>
+                
+            </div>
+            <form>
+            <div class="input-container">
+                <label class="label">Username</label>
+                <input class="form-input" type="text" placeholder="Enter UserName"></input>
+            </div>
+            <div class="input-container">
+                <label class="label">Password</label>
+                <input class="form-input" type="number"  placeholder="Enter Password"></input>
+            </div>
+            
+            </form>
+            <button class="btn">SIGN UP</button>
+            <div class="end-text">
+                Not a member ? <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">sign-up</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpClickHandler = () => {
+            const modal = document.getElementById("sign-up-modal");
+            modal.style.display = "flex";
+        };
+        const closeClickHandler = () =>{
+            const modal = document.getElementById("sign-up-modal");
+            modal.style.display = "";
+        }
+    </script>
+</body>
+</html>
